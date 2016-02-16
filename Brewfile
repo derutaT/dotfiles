@@ -10,6 +10,8 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Homebrew packages
+brew zsh --disable-etcdir
 brew lua
-brew peco
 brew vim --with-lua
+brew peco
+
