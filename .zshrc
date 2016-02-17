@@ -23,9 +23,9 @@ do . $file
 done
 
 # setup peco functions
-#for file in ~/.peco/*.sh
-#do . $file
-#done
+for file in ~/.peco/*.sh
+do . $file
+done
 
 # load alias settings
 for file in ~/.alias/*
