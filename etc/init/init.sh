@@ -18,3 +18,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # dircolors solarized
 git clone https://github.com/seebi/dircolors-solarized.git ~/dircolors-solarized
 
+# vim neobundle
+mkdir -p ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
