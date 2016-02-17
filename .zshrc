@@ -54,9 +54,9 @@ setopt print_eight_bit
 ## 補完候補のカーソル選択を有効に
 zstyle ':completion:*:default' menu select=1
 ## 補完候補の色づけ
-eval `dircolors`
-export ZLS_COLORS=$LS_COLORS
+eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-universal)
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+export ZLS_COLORS=$LS_COLORS
 ## ディレクトリ名だけで cd
 setopt auto_cd
 ## カッコの対応などを自動的に補完
