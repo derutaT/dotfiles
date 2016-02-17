@@ -11,7 +11,8 @@ brew brew-file
 
 # Other Homebrew packages
 brew zsh --disable-etcdir
+brew zsh-completions
 brew lua
 brew vim --with-lua
 brew peco
-
+brew tig
