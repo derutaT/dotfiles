@@ -102,6 +102,9 @@ syntax on
 " color scheme
 colorscheme Tomorrow-Night
 
+" ctr + f での移動時に末尾まで移動しても画面全体に文字を表示する
+noremap <expr> <C-f> max([winheight(0) - 2, 1]) . "\<C-d>" . (line('.') > line('$') - winheight(0) ? 'L' : 'H')
+
 " ------  Unite 設定 -------
 """ unite.vim {{{
 " 入力モードで開始する
