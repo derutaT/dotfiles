@@ -87,6 +87,29 @@ setopt list_packed
 ## 最後のスラッシュを自動的に削除しない
 setopt noautoremoveslash
 
+## ssh-agent
+#  自動で ssh-agent を起こしたり、接続したりする
+SSH_ENV=$HOME/.ssh-agent
+
+function start_agent {
+  ssh-agent > $SSH_ENV
+  chmod 600 $SSH_ENV
+  . $SSH_ENV > /dev/null
+  # ssh-add
+}
+
+if [ -f $SSH_ENV ]; then
+  . $SSH_ENV > /dev/null
+  if ps ${SSH_AGENT_PID:-999999} | grep ssh-agent$ > /dev/null &&
+     test -S $SSH_AUTH_SOCK; then
+    # agent already running
+  else
+    start_agent;
+  fi
+else
+  start_agent
+fi
+
 # setup local settings
 for file in ~/.local/*.sh
 do . $file
