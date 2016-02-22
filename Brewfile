@@ -20,8 +20,10 @@ brew tig
 
 brew git
 brew tmux
+brew autojump
+brew direnv
 
-brew rbenv 
+brew rbenv
 brew ruby-build
 brew rbenv-gemset
 # brew rbenv-rehash # package not found
