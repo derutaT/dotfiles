@@ -1,4 +1,5 @@
 export LANG=ja_JP.UTF-8
+export EDITOR='vim'
 
 ## 履歴の保存先
 HISTFILE=$HOME/.zsh-history
@@ -313,6 +314,10 @@ if [ $commands[autojump] ]; then # check if autojump is installed
     . `brew --prefix`/etc/autojump.zsh
   fi
 fi
+
+# direnv
+eval "$(direnv hook zsh)"
+
 
 # setup local settings
 for file in ~/.local/*.sh
