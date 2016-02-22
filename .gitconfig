@@ -16,6 +16,7 @@ interactive = auto
 [alias]
   co = checkout
   cm = commit
+  cmm = commit -m
   b  = branch
   ba = branch -a
   br = branch -r
