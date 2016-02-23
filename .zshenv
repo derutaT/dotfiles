@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+export PATH=/usr/local/bin:/sbin:/usr/sbin:/bin:/usr/bin
 
 export RBENV_ROOT=~/.rbenv
 export PATH=${RBENV_ROOT}/bin:$PATH
