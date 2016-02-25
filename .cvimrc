@@ -44,6 +44,9 @@ map <C-n> nextTab
 map <S-l> goForward
 map <S-h> goBack
 
+" disable clipbord paste
+unmap p
+
 "map <C-t> :new<Space>
 "map R reloadTabUncached
 " Want to make a key to yank current selected word and search it...
