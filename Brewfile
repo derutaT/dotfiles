@@ -29,3 +29,4 @@ brew rbenv-gemset
 # brew rbenv-rehash # package not found
 
 brew mysql
+brew pstree
