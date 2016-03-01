@@ -33,6 +33,11 @@ call dein#add( 'ujihisa/unite-colorscheme')
 " コメントON/OFFを手軽に実行
 call dein#add( 'tomtom/tcomment_vim')
 
+" use rsense
+call dein#add('marcus/rsense')
+"call dein#add('NigoroJr/rsense')
+call dein#add('supermomonga/neocomplete-rsense.vim')
+
 call dein#add( 'elzr/vim-json')
 call dein#add( '5t111111/neat-json.vim')
 
