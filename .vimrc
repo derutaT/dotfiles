@@ -19,7 +19,14 @@ call dein#begin(expand('~/.vim/dein'))
 call dein#add('Shougo/unite.vim')
 " mru を unite に追加
 call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/vimproc.vim')
+call dein#add('Shougo/vimproc', {
+     \ 'build' : {
+     \ 'windows' : 'make -f make_mingw32.mak',
+     \ 'cygwin' : 'make -f make_cygwin.mak',
+     \ 'mac' : 'make -f make_mac.mak',
+     \ 'unix' : 'make -f make_unix.mak',
+     \ },
+     \ })
 " 補完の強化
 call dein#add('Shougo/neocomplete.vim')
 " Mustang Color Scheme
