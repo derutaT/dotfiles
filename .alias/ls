@@ -1,3 +1,4 @@
+alias ls='gls --color=auto'
 alias ll='gls --color=auto -l'
 alias lla='gls --color=auto -la'
 alias la='gls --color=auto -a'
