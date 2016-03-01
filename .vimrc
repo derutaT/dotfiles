@@ -2,8 +2,6 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
-let g:neobundle_default_git_protocol='https'
-
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
