@@ -1,4 +1,4 @@
-"----- NeoBundle -----
+"----- Start dein -----
 " Note: Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
@@ -8,55 +8,44 @@ if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
   endif
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#begin(expand('~/.vim/dein'))
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
 
 " Unite
-NeoBundle 'Shougo/unite.vim'
+call dein#add( 'Shougo/unite.vim')
 " mru を unite に追加
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc.vim'
+call dein#add( 'Shougo/neomru.vim')
+call dein#add( 'Shougo/vimproc.vim')
 " Mustang Color Scheme
-NeoBundle 'croaker/mustang-vim'
+call dein#add( 'croaker/mustang-vim')
 " tomorrow Color Scheme
-NeoBundle 'chriskempson/vim-tomorrow-theme'
+call dein#add( 'chriskempson/vim-tomorrow-theme')
 " hybrid Color Scheme
-NeoBundle 'w0ng/vim-hybrid'
+call dein#add( 'w0ng/vim-hybrid')
 " 
-NeoBundle 'ujihisa/unite-colorscheme'
-" Git を操作
-" NeoBundle 'tpope/vim-fugitive'
+call dein#add( 'ujihisa/unite-colorscheme')
 " コメントON/OFFを手軽に実行
-NeoBundle 'tomtom/tcomment_vim'
+call dein#add( 'tomtom/tcomment_vim')
 
-NeoBundle 'elzr/vim-json'
-NeoBundle '5t111111/neat-json.vim'
+call dein#add( 'elzr/vim-json')
+call dein#add( '5t111111/neat-json.vim')
 
-call neobundle#end()
+call dein#end()
+
+if dein#check_install()
+  call dein#install()
+endif
 
 " Required:
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"----- NeoBundle -----
+"----- End dein -----
 
 "----- copy from system default file /etc/vim/vimrc -----
-set nocompatible  " Use Vim defaults instead of 100% vi compatibility
 set backspace=indent,eol,start  " more powerful backspacing
 set textwidth=0   " Don't wrap lines by default
 set nobackup    " Don't keep a backup file
