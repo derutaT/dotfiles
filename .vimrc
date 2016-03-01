@@ -41,7 +41,11 @@ call dein#add('ujihisa/unite-colorscheme')
 call dein#add('tomtom/tcomment_vim')
 
 " use rsense
-call dein#add('marcus/rsense')
+call dein#add('marcus/rsense', {
+      \ 'autoload': {
+      \   'filetypes': 'ruby',
+      \ },
+      \ })
 "call dein#add('NigoroJr/rsense')
 call dein#add('supermomonga/neocomplete-rsense.vim')
 
@@ -248,3 +252,11 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 "let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
+
+let g:rsenseHome = '/Users/hara_masaki/.vim/dein/repos/github.com/marcus/rsense'
+let g:rsenseUseOmniFunc = 1

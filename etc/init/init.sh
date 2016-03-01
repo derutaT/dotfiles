@@ -22,3 +22,6 @@ git clone https://github.com/seebi/dircolors-solarized.git ~/dircolors-solarized
 
 mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
 git clone https://github.com/Shougo/dein.vim.git ~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+# vim rsense
+ruby ~/.vim/dein/repos/github.com/marcus/rsense/etc/config.rb > ~/.rsense
