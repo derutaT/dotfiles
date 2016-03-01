@@ -8,47 +8,32 @@ if has('vim_starting')
   endif
 endif
 
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+" プラグインが実際にインストールされるディレクトリ
+let s:dein_dir = expand('~/.cache/dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-call dein#begin(expand('~/.vim/dein'))
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
 
+" 設定開始
+call dein#begin(s:dein_dir)
 
-" Unite
-call dein#add('Shougo/unite.vim')
-" mru を unite に追加
-call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/vimproc', {
-     \ 'build' : {
-     \ 'windows' : 'make -f make_mingw32.mak',
-     \ 'cygwin' : 'make -f make_cygwin.mak',
-     \ 'mac' : 'make -f make_mac.mak',
-     \ 'unix' : 'make -f make_unix.mak',
-     \ },
-     \ })
-" 補完の強化
-call dein#add('Shougo/neocomplete.vim')
-" Mustang Color Scheme
-call dein#add('croaker/mustang-vim')
-" tomorrow Color Scheme
-call dein#add('chriskempson/vim-tomorrow-theme')
-" hybrid Color Scheme
-call dein#add('w0ng/vim-hybrid')
-" 
-call dein#add('ujihisa/unite-colorscheme')
-" コメントON/OFFを手軽に実行
-call dein#add('tomtom/tcomment_vim')
+" プラグインリストを収めた TOML ファイル
+let s:toml      = '~/.vim/rc/dein.toml'
+let s:lazy_toml = '~/.vim/rc/dein_lazy.toml'
 
-" use rsense
-call dein#add('marcus/rsense', {
-      \ 'autoload': {
-      \   'filetypes': 'ruby',
-      \ },
-      \ })
-"call dein#add('NigoroJr/rsense')
-call dein#add('supermomonga/neocomplete-rsense.vim')
-
-call dein#add('elzr/vim-json')
-call dein#add('5t111111/neat-json.vim')
+" TOML を読み込み、キャッシュしておく
+if dein#load_cache([expand('<sfile>'), s:toml, s:lazy_toml])
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#save_cache()
+endif
 
 call dein#end()
 
@@ -256,5 +241,5 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
-let g:rsenseHome = '/Users/hara_masaki/.vim/dein/repos/github.com/marcus/rsense'
+let g:rsenseHome = '~/.cache/dein/repos/github.com/marcus/rsense'
 let g:rsenseUseOmniFunc = 1
