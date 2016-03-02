@@ -13,7 +13,7 @@ sudo echo /usr/local/bin/zsh >> /etc/shells
 chsh -s /usr/local/bin/zsh
 
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # dircolors solarized
 git clone https://github.com/seebi/dircolors-solarized.git ~/dircolors-solarized
