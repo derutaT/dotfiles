@@ -1,5 +1,6 @@
 {
   "Keymap": {
-    "C-f": "peco.Finish"
+    "C-f": "peco.Finish",
+    "C-s": "peco.ToggleSelectionAndSelectNext"
   }
 }
