@@ -28,5 +28,11 @@ brew ruby-build
 brew rbenv-gemset
 # brew rbenv-rehash # package not found
 
-brew mysql
 brew pstree
+
+# develop Rails
+brew mysql
+brew rsense
+cask install java
+
+
