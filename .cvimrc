@@ -41,6 +41,12 @@ map <C-n> nextTab
 map <S-l> goForward
 map <S-h> goBack
 
+" left hand Move and Navi
+map w scrollPageUp
+map s scrollPageDown
+map q previousTab
+map e nextTab
+
 " disable clipbord paste
 unmap p
 
