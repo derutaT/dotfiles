@@ -25,3 +25,6 @@ git clone https://github.com/Shougo/dein.vim.git ~/.vim/dein/repos/github.com/Sh
 
 # vim rsense
 ruby ~/.vim/dein/repos/github.com/marcus/rsense/etc/config.rb > ~/.rsense
+
+# tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
