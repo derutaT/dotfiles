@@ -36,3 +36,5 @@ on_ft = ['json']
 repo  = '5t111111/neat-json.vim'
 on_ft = ['json']
 
+[[plugins]]
+repo = 'tpope/vim-obsession'
