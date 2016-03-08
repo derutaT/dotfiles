@@ -14,14 +14,20 @@ brew zsh --disable-etcdir
 brew zsh-completions
 brew coreutils
 brew lua
-brew vim --with-lua
 brew peco
-brew tig
 
 brew git
+brew tig
 brew tmux
 brew autojump
 brew direnv
+
+# vim
+brew vim --with-lua
+# kaoriya macvim
+tap splhack/splhack
+tap universal-ctags/universal-ctags
+brew install splhack/splhack/macvim-kaoriya --HEAD 
 
 brew rbenv
 brew ruby-build
@@ -35,4 +41,9 @@ brew mysql
 brew rsense
 cask install java
 
+# AWS cli
 
+brew install awscli
+
+# htop alt top
+brew htop
