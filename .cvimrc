@@ -50,6 +50,10 @@ map e nextTab
 " disable clipbord paste
 unmap p
 
+" In insert t mode
+imap <C-c> Copy
+imap <C-v> Paste
+
 "map <C-t> :new<Space>
 "map R reloadTabUncached
 " Want to make a key to yank current selected word and search it...
