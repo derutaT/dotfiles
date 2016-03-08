@@ -243,3 +243,11 @@ let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
 let g:rsenseHome = '~/.cache/dein/repos/github.com/marcus/rsense'
 let g:rsenseUseOmniFunc = 1
+
+
+" ----- mouse setting -----
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
