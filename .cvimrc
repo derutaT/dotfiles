@@ -40,6 +40,7 @@ map <C-p> previousTab
 map <C-n> nextTab
 map <S-l> goForward
 map <S-h> goBack
+map <C-r> reloadTab
 
 " left hand Move and Navi
 map w scrollPageUp
@@ -55,3 +56,11 @@ map ; :<Space>
 
 " Text boxes
 iunmapAll
+imap <C-a> beginningOfLine
+imap <C-e> endOfLine
+imap <C-u> scrollPageUp
+imap <C-d> scrollPageDown
+
+# Maybe not work
+imap <C-c> copy
+imap <C-v> paste
