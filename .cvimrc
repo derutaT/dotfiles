@@ -61,6 +61,6 @@ imap <C-e> endOfLine
 imap <C-u> scrollPageUp
 imap <C-d> scrollPageDown
 
-# Maybe not work
+" Maybe not work
 imap <C-c> copy
 imap <C-v> paste
