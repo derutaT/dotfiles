@@ -46,7 +46,6 @@ filetype plugin indent on
 
 "----- End dein -----
 
-"----- copy from system default file /etc/vim/vimrc -----
 set backspace=indent,eol,start  " more powerful backspacing
 set textwidth=0   " Don't wrap lines by default
 set nobackup    " Don't keep a backup file
@@ -56,9 +55,9 @@ set history=50    " keep 50 lines of command line history
 set ruler   " show the cursor position all the time
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set autoindent
-"----- end of system default -----
 
-
+" 自動で折り返しの改行を入れる機能を無効化する
+set formatoptions-=tc
 
 " 行番号を表示 (number:表示)
 set number
