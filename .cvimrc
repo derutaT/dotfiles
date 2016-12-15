@@ -9,7 +9,7 @@ let blacklists = ["https://mail.google.com/*","http://feedly.com/*"]
 let mapleader = ","
 "let locale = "jp"
 let hintcharacters = "hjklasdfgyuiopqwertnmzxcvb"
-let barposition = "bottom"
+let barposition = "top"
 set autoupdategist
 
 " qmarks
