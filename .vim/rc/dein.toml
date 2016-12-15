@@ -23,4 +23,13 @@ repo = 'chriskempson/vim-tomorrow-theme'
 #[[plugins]]
 #repo = 'w0ng/vim-hybrid'
 
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+depends = ['chriskempson/vim-tomorrow-theme']
 
+# ES Lint 関連
+#[[plugins]]
+#repo = "scrooloose/syntastic"
+#
+#[[plugins]]
+#repo = "pmsorhaindo/syntastic-local-eslint.vim"

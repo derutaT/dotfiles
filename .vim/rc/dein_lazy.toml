@@ -9,6 +9,10 @@ on_source = ['unite.vim']
 repo    = 'ujihisa/unite-colorscheme'
 depends = ['Shougo/unite.vim']
 
+[[plugins]]
+repo      = 'tacroe/unite-mark'
+on_source = ['unite.vim']
+
 # 補完の強化
 # インサートモードに入ったら読み込む
 [[plugins]]
@@ -25,7 +29,7 @@ repo  = 'NigoroJr/rsense'
 on_ft = ['ruby']
 
 [[plugins]]
-repo    = 'supermomonga/neocomplete-rsense.vim'
+repo    = 'Shougo/neocomplcache-rsense.vim'
 depends = ['Shougo/neocomplete','marcus/rsense']
 
 [[plugins]]

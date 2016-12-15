@@ -88,9 +88,6 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 
 syntax on
 
-" color scheme
-colorscheme Tomorrow-Night
-
 " ctr + f での移動時に末尾まで移動しても画面全体に文字を表示する
 noremap <expr> <C-f> max([winheight(0) - 2, 1]) . "\<C-d>" . (line('.') > line('$') - winheight(0) ? 'L' : 'H')
 
@@ -129,6 +126,9 @@ nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,cg :<C-u>Unite grep:.  -buffer-name=search-buffer<CR><C-R><C-W><CR>
 " grep検索結果の再呼出
 nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+" mark 一覧
+nnoremap <silent> ,m :<C-u>Unite mark<CR>
 
 " unite-outline
 "nnoremap <silent> ,uo :<C-u>Unite -vertical outline<CR>
@@ -240,8 +240,8 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
-let g:rsenseHome = '~/.cache/dein/repos/github.com/marcus/rsense'
-let g:rsenseUseOmniFunc = 1
+"let g:rsenseHome = '~/.cache/dein/repos/github.com/marcus/rsense'
+"let g:rsenseUseOmniFunc = 1
 
 
 " ----- mouse setting -----
@@ -250,3 +250,27 @@ if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
+
+
+" Indent Color
+colorscheme default
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+"let g:indent_guides_guide_size = 1
+hi IndentGuidesOdd  guibg=gray0 ctermbg=8
+hi IndentGuidesEven guibg=green ctermbg=0
+
+" color scheme
+"colorscheme Tomorrow-Night
+
+" ---- ES Lint -----
+" eslintの追加
+"let g:syntastic_javascript_checkers=['eslint']
+"" エラー行にsignを表示
+"let g:syntastic_enable_signs=1
+"" location listを常に更新
+"let g:syntastic_always_populate_loc_list=0
+"" location listを常に表示
+"let g:syntastic_auto_loc_list=0
+"" ファイルを開いたときにチェックする
+"let g:syntastic_check_on_open=0

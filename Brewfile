@@ -40,6 +40,7 @@ brew pstree
 brew mysql
 brew rsense
 cask install java
+brew nodebrew
 
 # AWS cli
 

@@ -10,6 +10,9 @@ interactive = auto
 
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = '.sw?'
+	excludesfile = .sw?
+	whitespace = cr-at-eol
 [fetch]
 	prune = true
 
