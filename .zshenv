@@ -15,10 +15,15 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # mackerel-ssh
 export PATH=$HOME/bin/mackerel-ssh/:$PATH
+
+
+# Jave Version
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 

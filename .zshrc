@@ -335,3 +335,10 @@ done
 for file in ~/.alias/*
 do . $file
 done
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/hara_masaki/work/scsi/scsi-cb-policy/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/hara_masaki/work/scsi/scsi-cb-policy/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/hara_masaki/work/scsi/scsi-cb-policy/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/hara_masaki/work/scsi/scsi-cb-policy/serverless/node_modules/tabtab/.completions/sls.zsh

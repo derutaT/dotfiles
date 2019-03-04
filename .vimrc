@@ -274,3 +274,7 @@ hi IndentGuidesEven guibg=green ctermbg=0
 "let g:syntastic_auto_loc_list=0
 "" ファイルを開いたときにチェックする
 "let g:syntastic_check_on_open=0
+"
+
+" ---- Edit Crontab File 
+set backupskip=/tmp/*,/private/tmp/*
